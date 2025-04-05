@@ -58,3 +58,11 @@ else
 {
     WriteLine($"{c} + {d} does NOT equal {0.3M}");
 }
+
+WriteLine();
+
+#region Special float and double values
+WriteLine($"double.Epsilon: {double.Epsilon}");
+WriteLine($"double.Epsilon to 324 decimal places: {double.Epsilon:N324}");
+WriteLine($"double.Epsilon to 330 decimal places: {double.Epsilon:N330}");
+#endregion
