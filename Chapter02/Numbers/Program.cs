@@ -65,4 +65,22 @@ WriteLine();
 WriteLine($"double.Epsilon: {double.Epsilon}");
 WriteLine($"double.Epsilon to 324 decimal places: {double.Epsilon:N324}");
 WriteLine($"double.Epsilon to 330 decimal places: {double.Epsilon:N330}");
+const int col1 = 37; // First column width
+const int col2 = 6; // Second column width 
+string line = new string('-', col1 + col2 + 3);
+WriteLine(line);
+WriteLine($"{"Expression",-col1} | {"Value",col2}");
+WriteLine(line);
+WriteLine($"{"double.NaN",-col1} | {double.NaN,col2}");
+WriteLine($"{"double.PositiveInfinity",-col1} | {double.PositiveInfinity,col2}");
+WriteLine($"{"double.NegativeInfinity",-col1} | {double.NegativeInfinity,col2}");
+WriteLine(line);
+WriteLine($"{"0.0 / 0.0",-col1} | {0.0 / 0.0,col2}");
+WriteLine($"{"3.0 / 0.0",-col1} | {3.0 / 0.0,col2}");
+WriteLine($"{"-3.0 / 0.0",-col1} | {-3.0 / 0.0,col2}");
+WriteLine($"{"3.0 / 0.0 == double.PositiveInfinity",-col1} | {3.0 / 0.0 == double.PositiveInfinity,col2}");
+WriteLine($"{"-3.0 / 0.0 == double.NegativeInfinity",-col1} | {-3.0 / 0.0 == double.NegativeInfinity,col2}");
+WriteLine($"{"0.0 / 3.0",-col1} | {0.0 / 3.0,col2}");
+WriteLine($"{"0.0 / -3.0",-col1} | {0.0 / -3.0,col2}");
+WriteLine(line);
 #endregion
