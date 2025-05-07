@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variables", "Variables\Vari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formatting", "Formatting\Formatting.csproj", "{87D3EBAD-C8CA-475A-AD58-817BEE89F23E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arguments", "Arguments\Arguments.csproj", "{C170B09C-90A4-451C-A158-A2FCC1102594}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{87D3EBAD-C8CA-475A-AD58-817BEE89F23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87D3EBAD-C8CA-475A-AD58-817BEE89F23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87D3EBAD-C8CA-475A-AD58-817BEE89F23E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C170B09C-90A4-451C-A158-A2FCC1102594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C170B09C-90A4-451C-A158-A2FCC1102594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C170B09C-90A4-451C-A158-A2FCC1102594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C170B09C-90A4-451C-A158-A2FCC1102594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
