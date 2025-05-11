@@ -18,3 +18,19 @@ WriteLine($"e * f = {e * f}");
 WriteLine($"e / f = {e / f}");
 WriteLine($"e % f = {e % f}");
 #endregion
+
+#region Exploring logical operators 
+bool p = true;
+bool q = false;
+WriteLine($"AND    | P     | q    ");
+WriteLine($"p      | {p & p,-5} | {p & q,-5}  ");
+WriteLine($"q      | {q & p,-5} | {q & q,-5}");
+WriteLine();
+WriteLine($"OR     |       |      ");
+WriteLine($"p      | {p | p,-5} | {p | q,-5}");
+WriteLine($"q      | {q | p,-5} | {q | q,-5}");
+WriteLine();
+WriteLine($"XOR    | p     | q     ");
+WriteLine($"p      | {p ^ p,-5}, {p ^ q,-5}");
+WriteLine($"q      | {q ^ p,-5} | {q ^ q,-5}");
+#endregion
