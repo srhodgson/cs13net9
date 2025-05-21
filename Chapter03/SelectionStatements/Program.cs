@@ -78,12 +78,30 @@ foreach (Animal? animal in animals)
             message = $"{animal.Name} is a {animal.GetType().Name}.";
             break;
         case Spider spider when spider.IsVenemous:
-            message = $"The {spider.Name} spider is venemous. Run!";
+            message = $"The {spider.Name} spider is venemous. Run!";            
             break;
         case null:
             message = "The animal is null";
             break;
     }
     WriteLine($"switch statement: {message}");
+
+    WriteLine();
+    message = animal switch
+    {
+        Cat fourLeggedCat when fourLeggedCat.Legs == 4
+            => $"The cat name {fourLeggedCat.Name} has four legs.",
+        Cat wildCat when wildCat.IsDomestic == false
+            => $"The non-domestic cat is name {wildCat.Name}.",
+        Cat cat
+            => $"The cat is named {cat.Name}.",
+        Spider spider when spider.IsVenemous
+            => $"The {spider.Name} spider is venemous. Run!",
+        null
+            => "The animal is null",
+        _
+            => $"{animal.Name} is a {animal.GetType().Name}."
+    };
+    WriteLine($"switch expression: {message}");
 }
 #endregion
