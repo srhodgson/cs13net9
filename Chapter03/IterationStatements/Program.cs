@@ -40,7 +40,6 @@ for (int y = 0; y <= 10; y += 3)
 WriteLine();
 
 #region Looping with foreach statement
-
 string[] names = { "Adam", "Barry", "Charlie" };
 foreach (string name in names)
 {
