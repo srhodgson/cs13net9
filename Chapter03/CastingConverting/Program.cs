@@ -107,3 +107,18 @@ DateTime birthday = DateTime.Parse("9 December 1984");
 WriteLine($"I have {friends} firend to invite to my party.");
 WriteLine($"My birthday is {birthday}");
 WriteLine($"My birthday is {birthday:D}");
+
+WriteLine();
+
+// int count = int.Parse("abc");
+
+Write("How many eggs are there? ");
+string? input = ReadLine();
+if (int.TryParse(input, out int count))
+{
+    WriteLine($"There are {count} eggs.");
+}
+else
+{
+    WriteLine("I could not parse the input.");
+}
