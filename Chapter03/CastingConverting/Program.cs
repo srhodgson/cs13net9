@@ -55,8 +55,17 @@ for (int x = 0; x < 8; x++)
 {
     for (int y = 0; y < 3; y++)
     {
-        Write($"| {doubles[x, y],6} | {ToInt32(doubles[x, y]),7}");
+        Write($"| {doubles[x, y],6} | {ToInt32(doubles[x, y]),7} ");
     }
-    WriteLine(" | ");
+    WriteLine("|");
 }
 WriteLine();
+
+foreach (double n in doubles)
+{
+    WriteLine(format:
+    "Math.Round({0}, 0, MidpointRounding.AwayFromZero) is {1}",
+    arg0: n,
+    arg1: Math.Round(value: n, digits: 0,
+    mode: MidpointRounding.AwayFromZero));
+}
