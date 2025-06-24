@@ -13,13 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastingConverting", "CastingConverting\CastingConverting.csproj", "{F3CE3678-BB47-4571-839C-37613EC55577}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandlingExceptions", "HandlingExceptions\HandlingExceptions.csproj", "{F7B55A67-4070-4365-8C34-7A9D6AECEB7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{98200CCA-4839-4CDF-9A93-9E7466227BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +41,12 @@ Global
 		{F3CE3678-BB47-4571-839C-37613EC55577}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3CE3678-BB47-4571-839C-37613EC55577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3CE3678-BB47-4571-839C-37613EC55577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B55A67-4070-4365-8C34-7A9D6AECEB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B55A67-4070-4365-8C34-7A9D6AECEB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B55A67-4070-4365-8C34-7A9D6AECEB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B55A67-4070-4365-8C34-7A9D6AECEB7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
