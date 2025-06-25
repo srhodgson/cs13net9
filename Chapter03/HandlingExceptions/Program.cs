@@ -40,3 +40,16 @@ catch (OverflowException)
 {
     WriteLine("The code overflowed but I caught the exception.");
 }
+
+#region Disabling compiler overflow checks witht he unchecked statement 
+unchecked
+{
+    int y = int.MaxValue + 1;
+    WriteLine($"Initial value: {y}");
+    y--;
+    WriteLine($"After decrementing: {y}");
+    y--;
+    WriteLine($"After decrementing: {y}");
+}
+
+#endregion
