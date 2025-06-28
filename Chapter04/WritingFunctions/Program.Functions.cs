@@ -48,7 +48,7 @@ partial class Program
             case 11:  // Special cases for 11th to 13th 
             case 12:
             case 13:
-                return $"{number:N0}th";
+                return $"{number:N0}th ";
             default:
                 uint lastDigit = number % 10;
                 string suffix = lastDigit switch
@@ -58,7 +58,16 @@ partial class Program
                     3 => "rd",
                     _ => "th"
                 };
-                return $"{number:N0}{suffix}";
+                return $"{number:N0}{suffix} ";
         }
+    }
+
+    static void RunCardinalToOrdinal()
+    {
+        for (uint number = 1; number <= 150; number++)
+        {
+            Write($"{CardinalToOrdinal(number)}");
+        }
+        WriteLine();
     }
 }
