@@ -85,15 +85,30 @@ partial class Program
         }
         else
         {
-            return number * Factorial(number - 1);
+            checked
+            {
+                return number * Factorial(number - 1);
+            }
         }
     }
 
     static void RunFactorial()
     {
-        for (int i = 1; i <= 15; i++)
+        for (int i = -2; i <= 15; i++)
         {
-            WriteLine($"{i}! = {Factorial(i):N0}");
+            try
+            {
+                WriteLine($"{i}! = {Factorial(i):N0}");
+            }
+            catch (OverflowException)
+            {
+                WriteLine($"{i}! is too big for a 32-bit integer.");
+            }
+            catch (Exception ex)
+            {
+                WriteLine($"{i}! throws {ex.GetType()}: {ex.Message}");
+            }
+            
         }
     }
 }
