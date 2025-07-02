@@ -1,4 +1,5 @@
-using System.Globalization; // To use CultureInfo
+using System.Globalization;
+using System.Runtime.InteropServices.Marshalling; // To use CultureInfo
 
 partial class Program
 {
@@ -116,4 +117,56 @@ partial class Program
             
         }
     }
+
+    #region using lambdas in function implementations
+
+    static int FibImperative(uint term)
+    {
+        if (term == 0)
+        {
+            throw new ArgumentOutOfRangeException();
+        }
+        else if (term == 1)
+        {
+            return 0;
+        }
+        else if (term == 2)
+        {
+            return 1;
+        }
+        else
+        {
+            return FibImperative(term - 1) + FibImperative(term - 2);
+        }
+    }
+
+    static void RunFibImperative()
+    {
+        for (uint i = 1; i <= 30; i++)
+        {
+            WriteLine("The {0} term of the Fibonacci sequence is {1:N0}.",
+                arg0: CardinalToOrdinal(i),
+                arg1: FibImperative(term: i));
+        }
+    }
+
+    static int FibFunctional(uint term) => term switch
+    {
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        _ => FibFunctional(term - 1) + FibFunctional(term - 2)
+    };
+
+    static void RunFibFunctional()
+    {
+        for (uint i = 1; i <= 30; i++)
+        {
+            WriteLine("The {0} term of the Fibonacci sequence is {1:N0}.",
+                arg0: CardinalToOrdinal(i),
+                arg1: FibFunctional(term: i));
+        }
+    }
+
+    #endregion
 }
