@@ -9,5 +9,7 @@ ConfigureConsole();
 // Writeline($"You must pay {CalculateTax{amount: 149, twoLetterRegionCode: "FR"):C} in tax.");
 
 WriteLine();
-//RunCardinalToOrdinal();
+RunCardinalToOrdinal();
 RunFactorial();
+
+RunCardinalToOrdinal();
