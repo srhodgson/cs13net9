@@ -18,12 +18,15 @@ bob.Born = new DateTimeOffset(
     hour: 16, minute: 28, second: 0,
     offset: TimeSpan.FromHours(-5)); // US Eastern Standard Time
 bob.FavouriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
+bob.BucketList = WondersOfTheAncientWorld.HangingGardensOfBabylon |
+    WondersOfTheAncientWorld.MausoleumAtHalicarnassus;
 WriteLine(format: "{0} was born on {1:D}.",
     arg0: bob.Name, arg1: bob.Born);
 WriteLine(format: "{0}'s favorite wonder is {1}. It's integer is {2}.",
     arg0: bob.Name,
     arg1: bob.FavouriteAncientWonder,
     arg2: (int)bob.FavouriteAncientWonder);
+WriteLine($"{bob.Name}'s bucket list is {bob.BucketList}.");
 
 WriteLine();
 

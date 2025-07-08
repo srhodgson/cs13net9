@@ -7,5 +7,6 @@ public class Person : Object
     public string? Name; // ? means it can be null.
     public DateTimeOffset Born;
     public WondersOfTheAncientWorld FavouriteAncientWonder;
+    public WondersOfTheAncientWorld BucketList;
     #endregion
 }
