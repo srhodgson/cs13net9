@@ -88,3 +88,12 @@ WriteLine($"{"0.0 / 3.0",-col1} | {0.0 / 3.0,col2}");
 WriteLine($"{"0.0 / -3.0",-col1} | {0.0 / -3.0,col2}");
 WriteLine(line);
 #endregion
+
+#region New number types and unsafe code
+
+unsafe
+{
+    WriteLine($"Half uses {sizeof(Half)} bytes and can store numbers in the range {Half.MinValue:N0} to {Half.MaxValue:N0}");
+    WriteLine($"Int128 uses {sizeof(Int128)} bytes and can store numbers in the range {Int128.MinValue:N0} to {Int128.MaxValue:N0}");
+}
+#endregion
