@@ -48,3 +48,16 @@ XmlDocument xml2 = new XmlDocument(); // Works with all C# versions
 var file1 = File.CreateText("something1.txt");
 StreamWriter file2 = File.CreateText("something2.txt");
 #endregion
+
+WriteLine();
+
+#region Getting and setting the default values for types
+WriteLine($"default(int) = {default(int)}");
+WriteLine($"default(bool) = {default(bool)}");
+WriteLine($"default(DateTime) = {default(DateTime)}");
+WriteLine($"default(string) = {default(string) ?? "<NULL>"}");
+int number = 13;
+WriteLine($"number set to: {number}");
+number = default;
+WriteLine($"number reset to its default: {number}");
+#endregion
