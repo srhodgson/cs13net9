@@ -19,7 +19,7 @@ string formatted = string.Format(
 
 // WriteToFIle(formatted); // Write the string into a file
 
-// Three parameter values can use named arguments 
+// Three parameter values can use named arguments s
 Console.WriteLine("{0} {1} lived in {2}.",
 arg0: "Roger", arg1: "Cevung", arg2: "Stockholm");
 
