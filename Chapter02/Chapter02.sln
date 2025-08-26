@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numbers", "Numbers\Numbers.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variables", "Variables\Variables.csproj", "{77377713-9C12-425A-82E2-A01BC9428E6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formatting", "Formatting\Formatting.csproj", "{D071A7FC-6057-4F6A-9340-8FA37B1056EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{77377713-9C12-425A-82E2-A01BC9428E6A}.Release|x64.Build.0 = Release|Any CPU
 		{77377713-9C12-425A-82E2-A01BC9428E6A}.Release|x86.ActiveCfg = Release|Any CPU
 		{77377713-9C12-425A-82E2-A01BC9428E6A}.Release|x86.Build.0 = Release|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Debug|x64.Build.0 = Debug|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Debug|x86.Build.0 = Debug|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Release|x64.ActiveCfg = Release|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Release|x64.Build.0 = Release|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Release|x86.ActiveCfg = Release|Any CPU
+		{D071A7FC-6057-4F6A-9340-8FA37B1056EC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
