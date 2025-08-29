@@ -49,4 +49,17 @@ WriteLine(format: "{0,-10} {1,6:N0}",
 arg0: applesText, arg1: applesCount);
 WriteLine(format: "{0,-10} {1,6:N0}",
 arg0: bananasText, arg1: bananasCount);
+WriteLine();
+decimal value = 0.325M;
+WriteLine("Currency: {0:C}, Percentage: {0:0.0%}", value);
+#endregion
+
+WriteLine();
+
+#region Getting text input from the user
+Write("Type your first name and press ENTER: ");
+string? firstName = ReadLine();
+Write("Type your age and press ENTER: ");
+string age = ReadLine()!;
+WriteLine($"Hello {firstName}, you look good for {age}");
 #endregion
