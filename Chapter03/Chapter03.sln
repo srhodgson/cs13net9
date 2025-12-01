@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastingConverting", "Castin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandlingExceptions", "HandlingExceptions\HandlingExceptions.csproj", "{1C530152-74BE-44AF-B322-95D8416BA8C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise_FizzBuzz", "Exercise_FizzBuzz\Exercise_FizzBuzz.csproj", "{CF933B66-D115-40E1-9F58-707464263420}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{1C530152-74BE-44AF-B322-95D8416BA8C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C530152-74BE-44AF-B322-95D8416BA8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C530152-74BE-44AF-B322-95D8416BA8C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF933B66-D115-40E1-9F58-707464263420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF933B66-D115-40E1-9F58-707464263420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF933B66-D115-40E1-9F58-707464263420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF933B66-D115-40E1-9F58-707464263420}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

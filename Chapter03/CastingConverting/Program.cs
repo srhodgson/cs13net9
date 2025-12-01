@@ -2,6 +2,8 @@
 using System.Globalization;
 using System.Runtime.InteropServices; // To use CultureInfo
 
+using static System.Convert; // To use the ToInt32 method
+
 int a = 10;
 double b = a; // An int can be safely cast into a double 
 WriteLine($"a is {a}, b is {b}");
@@ -30,17 +32,18 @@ for (int i = 8; i >= -8; i--)
     WriteLine("{0,12} {0,34:B32}", i);
 }
 WriteLine("{0,12} {0,34:B32}", int.MinValue);
-#endregion
 
 WriteLine();
 
 long r = 0b_101000101010001100100111010100101010;
 int s = (int)r;
 WriteLine($"{r,38:B38} = {r}");
-WriteLine($"{s,38:B38} = {s}");
+WriteLine($"{s,38:B32} = {s}");
+#endregion
 
 WriteLine();
 
+#region Converting with System.Convert type
 double g = 9.8;
 int h = ToInt32(g); // A method of System.Convert.
 WriteLine($"g is {g}. h is {h}");
@@ -127,3 +130,6 @@ else
 {
     WriteLine($"I could not parse the input.");
 }
+#endregion
+
+
