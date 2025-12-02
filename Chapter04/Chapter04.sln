@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopLevelFunctions", "TopLevelFunctions\TopLevelFunctions.csproj", "{8BD8D26D-2D97-4ADA-9A9D-486412F0CBE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritingFunctions", "WritingFunctions\WritingFunctions.csproj", "{2BFFA2A5-4C5C-4523-BCFD-888BDC903681}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{8BD8D26D-2D97-4ADA-9A9D-486412F0CBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BD8D26D-2D97-4ADA-9A9D-486412F0CBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BD8D26D-2D97-4ADA-9A9D-486412F0CBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BFFA2A5-4C5C-4523-BCFD-888BDC903681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BFFA2A5-4C5C-4523-BCFD-888BDC903681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BFFA2A5-4C5C-4523-BCFD-888BDC903681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BFFA2A5-4C5C-4523-BCFD-888BDC903681}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
