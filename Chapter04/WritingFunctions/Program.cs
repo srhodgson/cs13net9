@@ -12,4 +12,8 @@ using System.Globalization; // To use CultureInfo
 
 //RunCardinalToOrdinal();
 
-RunFactorial();
+//RunFactorial();
+
+//RunFibImperative();
+
+RunFibFunctional();
