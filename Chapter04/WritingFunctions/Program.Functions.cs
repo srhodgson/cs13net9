@@ -29,7 +29,7 @@ partial class Program
         return amount * rate;
     }
 
-    static void ConfigureConsole(string culture = "en-US", bool useComputerCulture = false)
+    static void ConfigureConsole(string culture = "en-GB", bool useComputerCulture = false)
     {
         // To enable Unicode characters like the Euro symbol in the console 
         OutputEncoding = System.Text.Encoding.UTF8;
@@ -95,9 +95,20 @@ partial class Program
 
     static void RunFactorial()
     {
-        for (int i = 1; i <= 15; i++)
+        for (int i = -2; i <= 15; i++)
         {
-            WriteLine($"{i}! = {Factorial(i):N0!}");
+            try
+            {
+                WriteLine($"{i}! = {Factorial(i):N0}");
+            }
+            catch (OverflowException)
+            {
+                WriteLine($"{i}! is too big for a 32-bit integer.");
+            }
+            catch (Exception ex)
+            {
+                WriteLine($"{i}! throws {ex.GetType()}: {ex.Message}");
+            }
         }
     }
     #endregion
