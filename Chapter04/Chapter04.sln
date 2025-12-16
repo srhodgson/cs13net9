@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritingFunctions", "Writing
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging\Debugging.csproj", "{489D9B6C-FF1F-4493-9249-B27688812FC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLib", "CalculatorLib\CalculatorLib.csproj", "{CD70BAD6-F01D-45CA-BAA5-C8A1A265BF86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLibUnitTests", "CalculatorLibUnitTests\CalculatorLibUnitTests.csproj", "{B462F897-8C76-4E27-97D7-7C4CCB094909}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +29,13 @@ Global
 		{489D9B6C-FF1F-4493-9249-B27688812FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{489D9B6C-FF1F-4493-9249-B27688812FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{489D9B6C-FF1F-4493-9249-B27688812FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD70BAD6-F01D-45CA-BAA5-C8A1A265BF86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD70BAD6-F01D-45CA-BAA5-C8A1A265BF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD70BAD6-F01D-45CA-BAA5-C8A1A265BF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD70BAD6-F01D-45CA-BAA5-C8A1A265BF86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B462F897-8C76-4E27-97D7-7C4CCB094909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B462F897-8C76-4E27-97D7-7C4CCB094909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B462F897-8C76-4E27-97D7-7C4CCB094909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B462F897-8C76-4E27-97D7-7C4CCB094909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
