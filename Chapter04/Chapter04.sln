@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 
+#
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopLevelFunctions", "TopLevelFunctions\TopLevelFunctions.csproj", "{8BD8D26D-2D97-4ADA-9A9D-486412F0CBE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritingFunctions", "WritingFunctions\WritingFunctions.csproj", "{2BFFA2A5-4C5C-4523-BCFD-888BDC903681}"
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLib", "CalculatorLib\CalculatorLib.csproj", "{CD70BAD6-F01D-45CA-BAA5-C8A1A265BF86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLibUnitTests", "CalculatorLibUnitTests\CalculatorLibUnitTests.csproj", "{B462F897-8C76-4E27-97D7-7C4CCB094909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallStackExceptionHandlingLib", "CallStackExceptionHandlingLib\CallStackExceptionHandlingLib.csproj", "{3C1E62BF-A9B5-4AE2-A7CE-E942B8FC7320}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallStackExceptionHandling", "CallStackExceptionHandling\CallStackExceptionHandling.csproj", "{915CD680-663D-42FE-8357-3C43F80BF8F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,5 +41,13 @@ Global
 		{B462F897-8C76-4E27-97D7-7C4CCB094909}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B462F897-8C76-4E27-97D7-7C4CCB094909}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B462F897-8C76-4E27-97D7-7C4CCB094909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1E62BF-A9B5-4AE2-A7CE-E942B8FC7320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1E62BF-A9B5-4AE2-A7CE-E942B8FC7320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1E62BF-A9B5-4AE2-A7CE-E942B8FC7320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1E62BF-A9B5-4AE2-A7CE-E942B8FC7320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915CD680-663D-42FE-8357-3C43F80BF8F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915CD680-663D-42FE-8357-3C43F80BF8F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915CD680-663D-42FE-8357-3C43F80BF8F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915CD680-663D-42FE-8357-3C43F80BF8F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
