@@ -10,6 +10,7 @@
         <Using Include="System.Console" Static="true" />
     </ItemGroup>
     <ItemGroup>
+      <ProjectReference Include="..\PacktLibraryModern\PacktLibraryModern.csproj" />
       <ProjectReference Include="..\PacktLibraryNet2\PacktLibraryNet2.csproj" />
     </ItemGroup>
 
