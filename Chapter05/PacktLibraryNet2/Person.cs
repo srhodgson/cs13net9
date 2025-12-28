@@ -7,6 +7,15 @@ public class Person : object
     public string? Name; // ? means it can be null.
     public DateTimeOffset Born;
     public WondersOfTheAncientWorld FavouriteAncientWonder;
+    public WondersOfTheAncientWorld BucketList;
+    public List<Person> Children = new();
+    
+    // Constant fields: Values that are fixed at compilation 
+    public const string Species = "Homo Sapiens";
+    
+    // Read-only fields: Values that can be set at runtime 
+    public readonly string HomePlanet = "Earth";
+
     #endregion
 }
 

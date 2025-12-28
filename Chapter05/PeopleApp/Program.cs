@@ -22,6 +22,10 @@ WriteLine(format: "{0}'s favourite wonder is {1}. Its integer is {2}",
     arg1: bob.FavouriteAncientWonder,
     arg2: (int)bob.FavouriteAncientWonder);
 
+bob.BucketList = WondersOfTheAncientWorld.HangingGardensOfBabylon | WondersOfTheAncientWorld.MausoleumAtHalicarnassus;
+// bob.BucketList = (WondersOfTheAncientWorld)18;
+WriteLine($"{bob.Name}'s bucket list is {bob.BucketList}.");
+
 WriteLine();
 
 Person alice = new()
@@ -33,3 +37,46 @@ Person alice = new()
 };
 WriteLine(format: "{0} was born on {1:d}.", // Short date.
     arg0: alice.Name, arg1: alice.Born);    
+    
+WriteLine();
+
+// Works with all version of C#.
+Person alfred = new Person();
+alfred.Name = "Alfred";
+bob.Children.Add(alfred);
+// Works with C# 3 and later.
+bob.Children.Add(new Person() { Name = "Bella"});
+// Works with C# 9 and later.
+bob.Children.Add(new() { Name = "Zoe"});
+
+
+WriteLine($"{bob.Name} has {bob.Children.Count} children: ");
+for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++)
+{
+    WriteLine($"> {bob.Children[childIndex].Name}");
+}
+
+WriteLine();
+
+BankAccount.Interestrate = 0.012M; // Store a shared value in a static field 
+BankAccount jonesAccount = new();
+jonesAccount.AccountName = "Mrs. Jones";
+jonesAccount.Balance = 2400;
+WriteLine(format: "{0} earned {1:C} interest.",
+    arg0: jonesAccount.AccountName,
+    arg1: jonesAccount.Balance * BankAccount.Interestrate);
+
+WriteLine();
+
+BankAccount gerrierAccount = new();
+gerrierAccount.AccountName = "Ms. Gerrier";
+gerrierAccount.Balance = 98;
+WriteLine(format: "{0} earned {1:C} interest.",
+    arg0: gerrierAccount.AccountName,
+    arg1: gerrierAccount.Balance * BankAccount.Interestrate);
+
+WriteLine();
+// Constant fields are accessible via the types.
+WriteLine($"{bob.Name} is a {Person.Species}.");    
+// Read-only fields are accessible via the variable.
+WriteLine($"{bob.Name} was born on {bob.HomePlanet}");
