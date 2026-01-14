@@ -40,10 +40,22 @@ public class Person : object
     {
         WriteLine($"{Name} was born on a {Born:dddd}.");
     }
-    
+
     public string GetOrigin()
     {
         return $"{Name} was born on {HomePlanet}.";
+    }
+    #endregion
+
+    #region Defining and passing parameters to methods 
+    public string SayHello()
+    {
+        return $"{Name} says 'Hello!'";
+    }
+    
+    public string SayHelloTo(string name)
+    {
+        return $"{Name} says 'Hello, {name}!'";
     }
     #endregion
 }
