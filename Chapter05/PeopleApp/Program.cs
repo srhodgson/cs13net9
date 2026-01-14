@@ -121,3 +121,8 @@ Book book = new(isbn: "978-1803237800", title: "C# 12 .NET 8 - Modern Cross-Plat
 
 WriteLine("{0}: {1} written by {2} has {3:N0} pages.",
     book.Isbn, book.Title, book.Author, book.PageCount);
+
+WriteLine();
+
+bob.WriteToConsole();
+WriteLine(bob.GetOrigin());
