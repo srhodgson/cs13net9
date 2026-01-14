@@ -128,3 +128,5 @@ bob.WriteToConsole();
 WriteLine(bob.GetOrigin());
 WriteLine(bob.SayHello());
 WriteLine(bob.SayHelloTo("Emily"));
+WriteLine(bob.OptionalParameters());
+WriteLine(bob.OptionalParameters("Jump!", 98.5));
