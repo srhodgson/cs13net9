@@ -83,14 +83,13 @@ WriteLine($"{bob.Name} was born on {bob.HomePlanet}");
 
 WriteLine();
 
-Book book = new()
-{
-    Isbn = "978-1803237800",
-    Title = "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals"
-};
+//Book book = new()
+//{
+//    Isbn = "978-1803237800",
+//    Title = "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals"
+//};
 
-WriteLine("{0}: {1} written by {2} has {3:N0} pages.",
-    book.Isbn, book.Title, book.Author, book.PageCount);
+
 
 WriteLine();
 
@@ -107,3 +106,18 @@ WriteLine(format: "{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}.",
 arg0: gunny.Name,
 arg1: gunny.HomePlanet,
 arg2: gunny.Instantiated);
+
+/// Instantiate a book using object intialiser syntax.
+/// Book book = new() 
+/// {
+///     Isbn = "978-1803237800",
+///     Title = "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals"
+/// };
+Book book = new(isbn: "978-1803237800", title: "C# 12 .NET 8 - Modern Cross-Platform Development Fundamentals")
+{
+    Author = "Mark J. Price",
+    PageCount = 821
+};
+
+WriteLine("{0}: {1} written by {2} has {3:N0} pages.",
+    book.Isbn, book.Title, book.Author, book.PageCount);
