@@ -130,3 +130,5 @@ WriteLine(bob.SayHello());
 WriteLine(bob.SayHelloTo("Emily"));
 WriteLine(bob.OptionalParameters());
 WriteLine(bob.OptionalParameters("Jump!", 98.5));
+WriteLine(bob.OptionalParameters(number: 52.7, command: "Hide!"));
+WriteLine(bob.OptionalParameters("Poke!", active: false));
