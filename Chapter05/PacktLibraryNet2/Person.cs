@@ -15,13 +15,22 @@ public class Person : object
     public readonly string HomePlanet = "Earth";
     public readonly DateTime Instantiated;
     #endregion
-    
+
     #region Constructors: Called when using new to instantiate a type.
     public Person()
     {
         // Constructors can set default values for fields 
         // including any read-only fields like instantiated.
         Name = "Unknown";
+        Instantiated = DateTime.Now;
+    }
+    #endregion
+    
+    #region Defining multiple constructors
+    public Person(string initialName, string homePlanet)
+    {
+        Name = initialName;
+        HomePlanet = homePlanet;
         Instantiated = DateTime.Now;
     }
     #endregion
