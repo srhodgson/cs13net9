@@ -107,12 +107,12 @@ arg0: gunny.Name,
 arg1: gunny.HomePlanet,
 arg2: gunny.Instantiated);
 
-/// Instantiate a book using object intialiser syntax.
-/// Book book = new() 
-/// {
-///     Isbn = "978-1803237800",
-///     Title = "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals"
-/// };
+// Instantiate a book using object intialiser syntax.
+// Book book = new() 
+// {
+//     Isbn = "978-1803237800",
+//     Title = "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals"
+// };
 Book book = new(isbn: "978-1803237800", title: "C# 12 .NET 8 - Modern Cross-Platform Development Fundamentals")
 {
     Author = "Mark J. Price",
@@ -132,3 +132,21 @@ WriteLine(bob.OptionalParameters(3));
 WriteLine(bob.OptionalParameters(3,"Jump!", 98.5));
 WriteLine(bob.OptionalParameters(3, number: 52.7, command: "Hide!"));
 WriteLine(bob.OptionalParameters(3, "Poke!", active: false));
+
+WriteLine();
+
+int a = 10;
+int b = 20;
+int c = 30;
+int d = 40;
+WriteLine($"Before: a={a}, b={b}, c={c}, d={d}");
+bob.PassingParameters(a, b, ref c, out d);
+WriteLine($"After: a={a}, b={b}, c={c}, d={d}");
+
+int e = 50;
+int f = 60;
+int g = 70;
+WriteLine($"Before: e={e}, f={f}, g={g}, h doesn't exist yet!");
+// Simplified C# 7 or later syntax for the out parameter 
+bob.PassingParameters(e,f, ref g, out int h);
+WriteLine($"After: e={e}, f={f}, g={g}, h={h}");
