@@ -96,5 +96,17 @@ public class Person : object
 
         WriteLine($"{text}: {total}");
     }
+    
+    // Method that returns a tuple: (string, int)
+    public (string, int) GetFruit()
+    {
+        return ("Apples", 5);
+    }
+    
+    // Method that returns a tuple with named fields.
+    public (string Name, int Number) GetNamedFruit()
+    {
+        return (Name: "Apples", Number: 5);
+    }
 }
 
