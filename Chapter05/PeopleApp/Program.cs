@@ -167,7 +167,10 @@ WriteLine();
 (string, int) fruit = bob.GetFruit();
 WriteLine($"{fruit.Item1}, {fruit.Item2} there are.");
 
-var fruitNamed = bob.GetNamedFruit();
+// without an aliased tuple type.
+//var fruitNamed = bob.GetNamedFruit();
+// with an aliased tuple type 
+Fruit fruitNamed = bob.GetNamedFruit();
 WriteLine($"There are {fruitNamed.Number} {fruitNamed.Name}.");
 
 WriteLine();
@@ -179,7 +182,5 @@ WriteLine($"{thing2.Name} has {thing2.Count} children.");
 
 WriteLine();
 
-// without an aliased tuple type.
-//var fruitNamed = bob.GetNamedFruit();
-// with an aliased tuple type 
-Fruit frutiNamed = bob.GetNamedFruit();
+(string fruitName, int fruitNumber) = bob.GetFruit();
+WriteLine($"Deconstructed tuple: {fruitName}, {fruitNumber}");
