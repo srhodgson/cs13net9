@@ -102,11 +102,25 @@ public class Person : object
     {
         return ("Apples", 5);
     }
-    
+
     // Method that returns a tuple with named fields.
     public (string Name, int Number) GetNamedFruit()
     {
         return (Name: "Apples", Number: 5);
+    }
+
+    // Deconstructors: Break down this object into parts.
+    public void Deconstruct(out string? name, out DateTimeOffset dob)
+    {
+        name = Name;
+        dob = Born;
+    }
+    
+    public void Deconstruct(out string? name, out DateTimeOffset dob, out WondersOfTheAncientWorld fav)
+    {
+        name = Name;
+        dob = Born;
+        fav = FavouriteAncientWonder;
     }
 }
 

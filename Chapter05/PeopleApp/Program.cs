@@ -1,4 +1,5 @@
-﻿using Packt.Shared; // To use Person.
+﻿using System.IO.Compression;
+using Packt.Shared; // To use Person.
 
 using Fruit = (string Name, int Number); // Aliasing a tuple type.
 
@@ -184,3 +185,10 @@ WriteLine();
 
 (string fruitName, int fruitNumber) = bob.GetFruit();
 WriteLine($"Deconstructed tuple: {fruitName}, {fruitNumber}");
+
+WriteLine();
+
+var (name1, dob1) = bob; // Implicitly calls the Deconstruct method 
+WriteLine($"Deconstrcuted person: {name1}, {dob1}");
+var (name2, dob2, fav2) = bob;
+WriteLine($"Deconstructed person: {name2}, {dob2}, {fav2}");
