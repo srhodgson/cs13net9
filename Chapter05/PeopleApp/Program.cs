@@ -143,6 +143,8 @@ WriteLine($"Before: a={a}, b={b}, c={c}, d={d}");
 bob.PassingParameters(a, b, ref c, out d);
 WriteLine($"After: a={a}, b={b}, c={c}, d={d}");
 
+WriteLine();
+
 int e = 50;
 int f = 60;
 int g = 70;
@@ -150,3 +152,10 @@ WriteLine($"Before: e={e}, f={f}, g={g}, h doesn't exist yet!");
 // Simplified C# 7 or later syntax for the out parameter 
 bob.PassingParameters(e,f, ref g, out int h);
 WriteLine($"After: e={e}, f={f}, g={g}, h={h}");
+
+WriteLine();
+
+bob.ParamsParameters("Sum using commas", 3, 6, 1, 2);
+bob.ParamsParameters("Sum using collection expression", [3, 6, 1,2 ]);
+bob.ParamsParameters("Sum using explicit array", new int[] {3, 6, 1, 2});
+bob.ParamsParameters("Sum (empty)");
