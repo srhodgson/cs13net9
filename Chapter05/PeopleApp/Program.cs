@@ -1,4 +1,5 @@
-﻿using System.IO.Compression;
+﻿using System.Drawing;
+using System.IO.Compression;
 using Packt.Shared; // To use Person.
 
 using Fruit = (string Name, int Number); // Aliasing a tuple type.
@@ -217,3 +218,19 @@ Person sam = new()
 WriteLine(sam.Origin);
 WriteLine(sam.Greeting);
 WriteLine(sam.Age);
+
+WriteLine();
+
+sam.FavouriteIceCream = "Chocolate Fudge";
+WriteLine($"Sam's favourite ice-cream flavour is {sam.FavouriteIceCream}.");
+string colour = "Purple";
+try
+{
+    sam.FavoritePrimaryColour = colour;
+    WriteLine($"Sam's favourite primary colour is {sam.FavoritePrimaryColour}.");
+}
+catch (Exception ex)
+{
+    WriteLine("Tried to set '{0}' to '{1}': {2}",
+    nameof(sam.FavoritePrimaryColour), colour, ex.Message);
+}

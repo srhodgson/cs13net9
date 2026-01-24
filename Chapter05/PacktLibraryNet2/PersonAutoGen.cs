@@ -4,6 +4,32 @@ namespace Packt.Shared;
 
 public partial class Person
 {
+    // A read-write property define using C# 3 auto-syntax.
+    public string? FavouriteIceCream { get; set; }
+    // A private backing field to store the property value .
+    private string? _favoritePrimaryColour;
+    // A public property to read and write to the field.
+    public string? FavoritePrimaryColour
+    {
+        get
+        {
+            return _favoritePrimaryColour;
+        }
+        set
+        {
+            switch (value?.ToLower())
+            {
+                case "red":
+                case "green":
+                case "blue":
+                    _favoritePrimaryColour = value;
+                    break;
+                default:
+                    throw new ArgumentException($"{value} is not a primary colour. " + "Choose from: red, green, blue.");
+            }
+        }
+    }
+
     #region Properties: Methods to get and/or set data or state.
     // A readonly property defined using C# 1 to 5 sytanx.
     public string Origin
@@ -20,5 +46,7 @@ public partial class Person
     public string Greeting => $"{Name} says 'Hello!'";
     public int Age => DateTime.Today.Year - Born.Year;
     #endregion
+
+    
 
 }
