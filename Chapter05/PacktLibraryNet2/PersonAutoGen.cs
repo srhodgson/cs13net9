@@ -30,6 +30,29 @@ public partial class Person
         }
     }
 
+    private WondersOfTheAncientWorld _favouriteAncientWonder;
+    public WondersOfTheAncientWorld FavouriteAncientWonder
+    {
+        get { return _favouriteAncientWonder; }
+        set
+        {
+            string wonderName = value.ToString();
+            if (wonderName.Contains(','))
+            {
+                throw new ArgumentException(
+                    message: "Favourite ancient wonder can only have a single enum value.",
+                    paramName: nameof(FavouriteAncientWonder));
+            }
+            if (!Enum.IsDefined(typeof(WondersOfTheAncientWorld), value))
+            {
+                throw new ArgumentException(
+                    $"{value} is not a member of the WonderOfTheAncientWorld enum.",
+                    paramName: nameof(FavouriteAncientWonder));
+            }
+            _favouriteAncientWonder = value;
+        }
+    }
+
     #region Properties: Methods to get and/or set data or state.
     // A readonly property defined using C# 1 to 5 sytanx.
     public string Origin
