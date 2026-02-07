@@ -349,3 +349,8 @@ WriteLine();
 ImmutableAnimal oscar = new("Oscar", "Labrador");
 var (who, what) = oscar; // Calls the deconstruct methods
 WriteLine($"{who} is a {what}.");
+
+WriteLine();
+
+Headset vp = new("Apple", "Vision Pro");
+WriteLine($"{vp.ProductName} is made by {vp.Manufacturer}");
