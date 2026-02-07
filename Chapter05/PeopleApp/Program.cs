@@ -342,4 +342,10 @@ WriteLine();
 // string is the only class reference type implemented to 
 // act like a value type for equality. 
 WriteLine($"p1.Name: {p1.Name}, p2.Name: {p2.Name}");
-WriteLine($"p1.Name == p2.Name: {p1.Name == p2.Name}"); 
+WriteLine($"p1.Name == p2.Name: {p1.Name == p2.Name}");
+
+WriteLine();
+
+ImmutableAnimal oscar = new("Oscar", "Labrador");
+var (who, what) = oscar; // Calls the deconstruct methods
+WriteLine($"{who} is a {what}.");
