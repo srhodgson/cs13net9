@@ -18,7 +18,11 @@ Person zillah = new() { Name = "Zillah" };
 lamech.Marry(adah);
 
 // Call the instance method to marry Lamech and Zillah 
-Person.Marry(lamech, zillah);
+// Person.Marry(lamech, zillah)
+if (lamech + zillah)
+{
+    WriteLine($"{lamech.Name} and {zillah.Name} successfully got married");
+}
 lamech.OutputSpouses();
 adah.OutputSpouses();
 zillah.OutputSpouses();
@@ -32,6 +36,12 @@ WriteLine($"{baby1.Name} was born on {baby1.Born}");
 Person baby2 = Person.Procreate(zillah, lamech);
 baby2.Name = "Tubalcain";
 
+// Use the * operator to "multiply" 
+Person baby3 = lamech * adah;
+baby3.Name = "Jubal";
+Person baby4 = zillah * lamech;
+baby4.Name = "Naamah";
+
 adah.WriteChildrenToConsole();
 zillah.WriteChildrenToConsole();
 lamech.WriteChildrenToConsole();
@@ -41,3 +51,8 @@ for (int i = 0; i < lamech.Children.Count; i++)
     WriteLine(format: " {0}'s child #{1} is named \"{2}\".",
     arg0: lamech.Name, arg1: i, arg2: lamech.Children[i].Name);
 }
+
+WriteLine();
+
+
+
