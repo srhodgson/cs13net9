@@ -2,7 +2,7 @@
 
 namespace Packt.Shared;
 
-public class Person
+public class Person : IComparable<Person?>
 {
     #region Properties
     public string? Name { get; set; }
@@ -135,6 +135,41 @@ public class Person
             // ...then call the delegate to "raise" the event.
             Shout(this, EventArgs.Empty);
         }
+    }
+
+    public int CompareTo(Person? other)
+    {
+        int position;
+        if (other is not null)
+        {
+            if ((Name is not null) && (other.Name is not null))
+            {
+                // If both Name values are not null, then use the string 
+                // implementation of CompareTo
+                position = Name.CompareTo(other.Name);
+            }
+            else if ((Name is not null) && (other.Name is not null))
+            {
+                position = -1; // this Person precedes other Person
+            }
+            else if ((Name is null) && (other.Name is not null))
+            {
+                position = 1; // This Person follows other Person
+            }
+            else // Name and other Name are both null
+            {
+                position = 0; // This and other are at the same position.
+            }
+        }
+        else if (other is null)
+        {
+            position = -1; // this person precedes other Person 
+        }
+        else // This and other are both null
+        {
+            position = 0; // this and other are at the same position
+        }
+        return position;
     }
     #endregion
 }
