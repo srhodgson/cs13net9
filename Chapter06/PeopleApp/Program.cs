@@ -109,3 +109,34 @@ Person?[] people =
 OutputPeopleNames(people, "Initial list of people:");
 Array.Sort(people);
 OutputPeopleNames(people, "After sorting using Person's IComparable implementation:");
+
+WriteLine();
+
+Employee john = new()
+{
+    Name = "John Jones",
+    Born = new(year: 1990, month: 7, day: 28, hour: 0, minute: 0, second: 0, offset: TimeSpan.Zero)
+};
+
+john.WriteToConsole();
+
+WriteLine();
+
+john.EmployeeCode = "JJ001";
+john.HireDate = new(year: 2014, month: 11, day: 23);
+WriteLine($"{john.Name} was hired on {john.HireDate:yyyy-MM-dd}.");
+
+WriteLine(john.ToString());
+WriteLine();
+
+Employee aliceInEmployee = new()
+{
+    Name = "Alice", 
+    EmployeeCode = "AA123"
+};
+
+Person aliceInPerson = aliceInEmployee;
+aliceInPerson.WriteToConsole();
+aliceInPerson.WriteToConsole();
+WriteLine(aliceInEmployee.ToString());
+WriteLine(aliceInPerson.ToString());
