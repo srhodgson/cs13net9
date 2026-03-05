@@ -9,5 +9,8 @@
     <ItemGroup Label="To simplify use of Console methods.">
         <Using Include="System.Console" Static="true" />
     </ItemGroup>
+    <ItemGroup>
+        <Using Remove="System" />
+    </ItemGroup>
 
 </Project>
