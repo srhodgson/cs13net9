@@ -1,6 +1,6 @@
 namespace Packt.Shared;
 
-// a mutable record class.
+// A mutable record class.
 public record class C1
 {
     public string? Name { get; set; }
@@ -15,7 +15,7 @@ public record struct S1
     public string? Name { get; set; }
 }
 
-// Another mutable record struct 
+// Another mutable record struct.
 public record struct S2(string? Name);
 
 // An immutable record struct.

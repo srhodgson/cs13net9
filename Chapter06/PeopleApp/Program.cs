@@ -117,7 +117,6 @@ Employee john = new()
     Name = "John Jones",
     Born = new(year: 1990, month: 7, day: 28, hour: 0, minute: 0, second: 0, offset: TimeSpan.Zero)
 };
-
 john.WriteToConsole();
 
 WriteLine();
