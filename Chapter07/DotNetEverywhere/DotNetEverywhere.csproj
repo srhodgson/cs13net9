@@ -8,6 +8,7 @@
     <RuntimeIdentifiers>
       win-x64;osx-arm64;linux-x64
     </RuntimeIdentifiers>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <Using Static="True" Include="System.Console" />
