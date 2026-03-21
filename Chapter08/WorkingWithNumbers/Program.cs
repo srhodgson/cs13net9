@@ -52,3 +52,7 @@ for (int i = 0; i < arrayOfBytes.Length; i++)
 }
 WriteLine();
 
+string[] beatles = r.GetItems(
+    choices: new[] { "john", "Paul", "George", "Ringo" },
+    length: 10);
+
