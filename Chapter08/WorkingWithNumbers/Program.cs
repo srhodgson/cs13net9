@@ -55,4 +55,20 @@ WriteLine();
 string[] beatles = r.GetItems(
     choices: new[] { "john", "Paul", "George", "Ringo" },
     length: 10);
+Write("Random ten beatles:");
+foreach (string beatle in beatles)
+{
+    Write($" {beatle}");
+}
+
+WriteLine();
+
+r.Shuffle(beatles);
+Write("Shuffled beatles:");
+foreach (string beatle in beatles)
+{
+    Write($" {beatle}");
+}
+
+WriteLine();
 
