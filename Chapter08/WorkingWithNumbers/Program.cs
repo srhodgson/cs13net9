@@ -33,3 +33,22 @@ WriteLine("{0} + {1}i added to {2} + {3}i is {4} + {5}i",
     c1.Real, c1.Imaginary,
     c2.Real, c2.Imaginary,
     c3.Real, c3.Imaginary);
+
+WriteLine();
+
+Random r = Random.Shared;
+// minValue is an inclusive lower bound i.e. 1 is a possible value.
+// maxValue is an exclusive upper bound i.e. 7 is not a possible value.
+int dieRoll = r.Next(minValue: 1, maxValue: 7); // Returns 1 to 6;
+WriteLine($"Random die roll: {dieRoll}");
+double randomReal = r.NextDouble(); // Returns 0.0 to less than 1.0
+WriteLine($"Random double: {randomReal}");
+byte[] arrayOfBytes = new byte[256];
+r.NextBytes(arrayOfBytes); // Fills array with 256 random bytes.
+Write("Random bytes: ");
+for (int i = 0; i < arrayOfBytes.Length; i++)
+{
+    Write($"{arrayOfBytes[i]:X2}");
+}
+WriteLine();
+
