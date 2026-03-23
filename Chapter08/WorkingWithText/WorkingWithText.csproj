@@ -8,5 +8,8 @@
         <PublishAot>true</PublishAot>
         <InvariantGlobalization>true</InvariantGlobalization>
     </PropertyGroup>
+    <ItemGroup>
+        <Using Include="System.Console" Static="true" />
+    </ItemGroup>
 
 </Project>
