@@ -22,3 +22,10 @@ string lastName = fullName.Substring(
     startIndex: indexOfTheSpace + 1);
 WriteLine($"Original: {fullName}");
 WriteLine($"Swapped: {lastName}, {firstName}");    
+
+WriteLine();
+
+string company = "Microsoft";
+WriteLine($"Text: {company}");
+WriteLine($"Starts with M: {0}, contains an N: {1}",
+    arg0: company.StartsWith('M'), arg1: company.Contains('N'));
