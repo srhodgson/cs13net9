@@ -56,3 +56,20 @@ WriteLine("Compare (IgnoreCase, IgnoreNonSPace): {0}.",
     CompareOptions.IgnoreNonSpace | CompareOptions.IgnoreCase));
 WriteLine("Compare (InvariantCultureIgnoreCase): {0}.",
     string.Compare(text1, text2, StringComparison.InvariantCultureIgnoreCase));
+
+CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("de-DEen-GB");
+
+
+WriteLine();
+
+string recombined = string.Join(" => ", citiesArray);
+WriteLine(recombined);
+
+WriteLine();
+
+string fruit = "Apples";
+decimal price = 0.39M;
+DateTime when = DateTime.Today;
+WriteLine($"Interpolated: {fruit} cost {price:C} on {when:dddd}");
+WriteLine(string.Format("string.Format: {0} cost {1:C} on {2:dddd}.",
+    arg0: fruit, arg1: price, arg2: when));
