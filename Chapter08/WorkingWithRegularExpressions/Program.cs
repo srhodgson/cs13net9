@@ -2,7 +2,7 @@
 
 Write("Enter your age: ");
 string input = ReadLine()!; // Null-forgiving operator 
-Regex ageChecker = new(@"^\d+$"); // Check that the only thing between the start 
+Regex ageChecker = DigitsOnly; // Check that the only thing between the start 
                                   // and end of the input is one or more digits
 WriteLine(ageChecker.IsMatch(input) ? "Thank you!" :
     $"This is not a valid age: {input}");
@@ -23,8 +23,7 @@ foreach (string film in filmsDumb)
     WriteLine($"    {film}");
 }
 
-Regex csv = new(
-    "(?:^|,)(?=[^\"]|(\")?)\"?((?(1)[^\"]*|[^,\"]*))\"?(?=,|$)");
+Regex csv = CommaSeparator;
 MatchCollection filmSmart = csv.Matches(films);
 WriteLine("Splitting with regular expression:");
 foreach(Match film in filmSmart)
