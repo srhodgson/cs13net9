@@ -20,13 +20,13 @@ keywords.Add("float", "Single precision floating point number");
  * };
  */
 
-///Alternative syntax; compiler converts this to calls to Add method 
-/// Dictionary<string, string> keywords = new() 
-/// {
-///    ["int"] = "32-bit integer data type",
-///    ["long"] = "64-bit integer data type",
-///    ["float"] = "Single precision floating point number",
-/// };
+//Alternative syntax; compiler converts this to calls to Add method 
+//Dictionary<string, string> keywords = new() 
+//{
+//   ["int"] = "32-bit integer data type",
+//   ["long"] = "64-bit integer data type",
+//   ["float"] = "Single precision floating point number",
+//};
 OutputCollection("Dictionary keys", keywords.Keys);
 OutputCollection("Dictionary values", keywords.Values);
 WriteLine("Keywords and their definitions:");
@@ -62,3 +62,51 @@ cities.RemoveAt(1);
 cities.Remove("Milan");
 OutputCollection("After removing two cities", cities);
 
+
+HashSet<string> names = new();
+foreach (string name in new[] { "Adam", "Barry", "Charlie", "Barry" })
+{
+    bool added = names.Add(name);
+    WriteLine($"{name} was added: {added}.");
+}
+WriteLine($"names set: {string.Join(',', names)}");
+
+WriteLine();
+
+Queue<string> coffee = new();
+coffee.Enqueue("Damir"); // Front of thbe queue 
+coffee.Enqueue("Andrea");
+coffee.Enqueue("Ronald");
+coffee.Enqueue("Amin");
+coffee.Enqueue("Irina"); // Back of the queue 
+OutputCollection("Initial queue from front to back", coffee);
+// Server handles next person in queue.
+string served = coffee.Dequeue();
+WriteLine($"Served: {served}");
+// Server handles next person in queue.
+served = coffee.Dequeue();
+WriteLine($"Served: {served}");
+OutputCollection("Current queue from front to back", coffee);
+WriteLine($"{coffee.Peek()} is the next in line.");
+OutputCollection("Current queue from front to back", coffee);
+
+WriteLine();
+
+PriorityQueue<string, int> vaccine = new();
+// Add some people.
+// 1 = High priority people in their 70s or poor health.
+// 2 = Medium priority e.g. middle-aged.
+// 3 = Low priority e.g. teens and twenties.
+vaccine.Enqueue("Pamela", 1);
+vaccine.Enqueue("Rebecca", 3);
+vaccine.Enqueue("Juliet", 2);
+vaccine.Enqueue("Ian", 1);
+OutputPQ("Current queue for vaccination", vaccine.UnorderedItems);
+WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
+WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
+OutputPQ("Current queue for vaccination", vaccine.UnorderedItems);
+WriteLine($"{vaccine.Dequeue()} has been  vaccinated.");
+WriteLine("Adding MArk to the queue with priority 2 .");
+vaccine.Enqueue("Mark", 2);
+WriteLine($"{vaccine.Peek()} will be next to be vaccinated.");
+OutputPQ("Current queue for vaccination", vaccine.UnorderedItems);
