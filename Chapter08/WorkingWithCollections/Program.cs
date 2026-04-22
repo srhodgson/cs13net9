@@ -1,5 +1,6 @@
 ﻿// Define an alias for dictionary with string key and string value.
 using StringDictionary = System.Collections.Generic.Dictionary<string, string>;
+using System.Collections.Immutable; // To use ImmutableDictionary<T, T>.
 
 // Declare a dictionary without the alias.
 // Dictionary<string, string> keywords = new();
@@ -110,3 +111,17 @@ WriteLine("Adding MArk to the queue with priority 2 .");
 vaccine.Enqueue("Mark", 2);
 WriteLine($"{vaccine.Peek()} will be next to be vaccinated.");
 OutputPQ("Current queue for vaccination", vaccine.UnorderedItems);
+
+WriteLine();
+
+//UseDictionary(keywords);
+//UseDictionary(keywords.AsReadOnly());
+UseDictionary(keywords.ToImmutableDictionary());
+
+ImmutableDictionary<string, string> immutableKeywords = keywords.ToImmutableDictionary();
+// Call the Add method with a return value.
+ImmutableDictionary<string, string> newDictionary = immutableKeywords.Add(
+    key: Guid.NewGuid().ToString(),
+    value: Guid.NewGuid().ToString());
+OutputCollection("Immutable keywords dictionary", immutableKeywords);
+OutputCollection("New keywords dictionary", newDictionary);    
