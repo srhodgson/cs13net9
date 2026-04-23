@@ -1,6 +1,7 @@
 ﻿// Define an alias for dictionary with string key and string value.
 using StringDictionary = System.Collections.Generic.Dictionary<string, string>;
 using System.Collections.Immutable; // To use ImmutableDictionary<T, T>.
+using System.Collections.Frozen; // To use FrozenDictionary
 
 // Declare a dictionary without the alias.
 // Dictionary<string, string> keywords = new();
@@ -50,7 +51,7 @@ cities.Add("Milan");
 // List<string> cities = new() { "London", "Paris", "Milan" };
 
 // Alternative syntax that passes an array of string values to AddRange method.
-// List<strring> cities = new();
+// List<string> cities = new();
 // cities.AddRange(new[] { "London", "Paris", "Milan" });
 OutputCollection("Initial list", cities);
 WriteLine($"The first city is {cities[0]}.");
@@ -75,7 +76,7 @@ WriteLine($"names set: {string.Join(',', names)}");
 WriteLine();
 
 Queue<string> coffee = new();
-coffee.Enqueue("Damir"); // Front of thbe queue 
+coffee.Enqueue("Damir"); // Front of the queue 
 coffee.Enqueue("Andrea");
 coffee.Enqueue("Ronald");
 coffee.Enqueue("Amin");
@@ -124,4 +125,13 @@ ImmutableDictionary<string, string> newDictionary = immutableKeywords.Add(
     key: Guid.NewGuid().ToString(),
     value: Guid.NewGuid().ToString());
 OutputCollection("Immutable keywords dictionary", immutableKeywords);
-OutputCollection("New keywords dictionary", newDictionary);    
+OutputCollection("New keywords dictionary", newDictionary);
+
+WriteLine();
+
+// Creating a frozen collection has an overhead to perform the sometimes complex
+// optimisations.
+FrozenDictionary<string, string> frozenKeywords = keywords.ToFrozenDictionary();
+OutputCollection("Frozen keywords duictionary", frozenKeywords);
+// Lookups are faster in a frozen dictionary.
+WriteLine($"Define long: {frozenKeywords["long"]}");
