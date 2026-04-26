@@ -1,7 +1,7 @@
 ﻿// Define an alias for dictionary with string key and string value.
 using StringDictionary = System.Collections.Generic.Dictionary<string, string>;
 using System.Collections.Immutable; // To use ImmutableDictionary<T, T>.
-using System.Collections.Frozen; // To use FrozenDictionary
+using System.Collections.Frozen; // To use FrozenDictionary<T, T>.
 
 // Declare a dictionary without the alias.
 // Dictionary<string, string> keywords = new();
@@ -108,7 +108,7 @@ WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
 WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
 OutputPQ("Current queue for vaccination", vaccine.UnorderedItems);
 WriteLine($"{vaccine.Dequeue()} has been  vaccinated.");
-WriteLine("Adding MArk to the queue with priority 2 .");
+WriteLine("Adding Mark to the queue with priority 2 .");
 vaccine.Enqueue("Mark", 2);
 WriteLine($"{vaccine.Peek()} will be next to be vaccinated.");
 OutputPQ("Current queue for vaccination", vaccine.UnorderedItems);
@@ -129,9 +129,8 @@ OutputCollection("New keywords dictionary", newDictionary);
 
 WriteLine();
 
-// Creating a frozen collection has an overhead to perform the sometimes complex
-// optimisations.
+// Creating a frozen collection has an overhead to perform the sometimes complex optimisations 
 FrozenDictionary<string, string> frozenKeywords = keywords.ToFrozenDictionary();
-OutputCollection("Frozen keywords duictionary", frozenKeywords);
-// Lookups are faster in a frozen dictionary.
+OutputCollection("Frozen keywords dictionary", frozenKeywords);
+// Lookups are faster in a frozen dictionary 
 WriteLine($"Define long: {frozenKeywords["long"]}");
