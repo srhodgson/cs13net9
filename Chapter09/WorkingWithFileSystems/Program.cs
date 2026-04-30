@@ -23,3 +23,28 @@ table.AddRow("  .Personal)", GetFolderPath(SpecialFolder.Personal));
 // Render the table to the console.
 AnsiConsole.Write(table);
 #endregion
+
+#region Managing drives 
+SectionTitle("Managing drives");
+Table drives = new();
+drives.AddColumn("[blue]NAME[/]");
+drives.AddColumn("[blue]TYPE[/]");
+drives.AddColumn("[blue]FORMAT[/]");
+drives.AddColumn(new TableColumn("[blue]SIZE (BYTES)[/]").RightAligned());
+drives.AddColumn(new TableColumn("[blue]FREE SPACE[/]").RightAligned());
+foreach (DriveInfo drive in DriveInfo.GetDrives())
+{
+    if (drive.IsReady)
+    {
+        drives.AddRow(drive.Name, drive.DriveType.ToString(),
+            drive.DriveFormat, drive.TotalSize.ToString("N0"),
+            drive.AvailableFreeSpace.ToString("NO"));
+    }
+    else
+    {
+        drives.AddRow(drive.Name, drive.DriveType.ToString(),
+            string.Empty, string.Empty, string.Empty);
+    }
+}
+AnsiConsole.Write(drives);
+#endregion
