@@ -48,3 +48,22 @@ foreach (DriveInfo drive in DriveInfo.GetDrives())
 }
 AnsiConsole.Write(drives);
 #endregion
+
+#region Managing directories
+SectionTitle("Managing directories");
+string newFolder = Combine(
+    GetFolderPath(SpecialFolder.Personal), "New Folder");
+WriteLine($"Working with: {newFolder}");
+// We must explicitly say which Exists method to use 
+// because we statically imported both Path and Directory.
+WriteLine($"Does it exist? {Path.Exists(newFolder)}");
+WriteLine("Creating it...");
+CreateDirectory(newFolder);
+// Let's use the Directory.Exists method this time.
+WriteLine($"Does it exist? {Directory.Exists(newFolder)}");
+Write("Confirm the directory exists, and then press any key.");
+ReadKey(intercept: true);
+WriteLine("Deleting it...");
+Delete(newFolder, recursive: true);
+WriteLine($"Does it exist? {Path.Exists(newFolder)}");
+#endregion
