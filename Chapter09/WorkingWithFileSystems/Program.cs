@@ -91,4 +91,29 @@ ReadKey(intercept: true);
 // Delete the file 
 File.Delete(textFile);
 WriteLine($"Does it exist? {File.Exists(textFile)}");
+// Read from the text file backup
+WriteLine($"Reading contents of {backupFile}:");
+StreamReader textReader = File.OpenText(backupFile);
+WriteLine(textReader.ReadToEnd());
+textReader.Close();
+#endregion
+
+#region Managing paths
+SectionTitle("Managing paths");
+WriteLine($"Folder Name: {GetDirectoryName(textFile)}");
+WriteLine($"File Name: {GetFileName(textFile)}");
+WriteLine("File Name without Extension: {0}",
+    GetFileNameWithoutExtension(textFile));
+WriteLine($"File Extension: {GetExtension(textFile)}");
+WriteLine($"Random File Name: {GetRandomFileName()}");
+WriteLine($"Temporary File Name: {GetTempFileName()}");
+#endregion
+
+#region Getting file information
+SectionTitle("Getting file information");
+FileInfo info = new(backupFile);
+WriteLine($"{backupFile}");
+WriteLine($"    Contains {info.Length}");
+WriteLine($"    Last accessed: {info.LastAccessTime}");
+WriteLine($"    Has readonly set to {info.IsReadOnly}");
 #endregion
