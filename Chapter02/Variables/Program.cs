@@ -1,4 +1,6 @@
-﻿#region Storing any type of object
+﻿using System.Xml;
+
+#region Storing any type of object
 object height = 1.88; // Storing a double in an object 
 object name = "Amir"; // Storing a string in an object 
 Console.WriteLine($"{name} is {height} metres tall");
@@ -25,4 +27,23 @@ something = new[] { 3, 5, 7 };
 Console.WriteLine($"The length of something is {something.Length}");
 // Output the type of the something's variable 
 Console.WriteLine($"something is a {something.GetType()}");
+#endregion
+
+Console.WriteLine("----------");
+
+#region Declaring local variables
+var population = 67_000_000; // 67 million people in the UK
+var weight = 1.88; // in kilograms 
+var price = 4.99M; // in pounds sterling 
+var fruit = "Apples"; // string values use double quotes 
+var letter = 'Z'; // char values use single-quotes 
+var happy = true; // Booleans can only be true or false 
+
+// Good use of var because it avoids the repeated type as shown in the more verbose second statement.
+var xml1 = new XmlDocument(); // Works with C# 3 and later.
+XmlDocument xml2 = new XmlDocument(); // Works with all C# versions 
+
+// Bad use of var because we cannot tell the type, so we should use a specific type declaration as shown in the second statement
+var file1 = File.CreateText("ssomething1.txt");
+StreamWriter file2 = File.CreateText("ssomething2.txt");
 #endregion
