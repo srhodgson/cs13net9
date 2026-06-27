@@ -44,6 +44,20 @@ var xml1 = new XmlDocument(); // Works with C# 3 and later.
 XmlDocument xml2 = new XmlDocument(); // Works with all C# versions 
 
 // Bad use of var because we cannot tell the type, so we should use a specific type declaration as shown in the second statement
-var file1 = File.CreateText("ssomething1.txt");
-StreamWriter file2 = File.CreateText("ssomething2.txt");
+var file1 = File.CreateText("something1.txt");
+StreamWriter file2 = File.CreateText("something2.txt");
+#endregion
+
+Console.WriteLine("----------");
+
+#region getting and setting default values
+Console.WriteLine($"default(int) = {default(int)}");
+Console.WriteLine($"default(bool) = {default(bool)}");
+Console.WriteLine($"default(DateTime) = {default(DateTime)}");
+Console.WriteLine($"default(string) = {default(string) ?? "<NULL>"}");
+
+int number = 13;
+Console.WriteLine($"number set to: {number}");
+number = default;
+Console.WriteLine($"number reset to its default: {number}");
 #endregion
