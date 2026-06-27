@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vocabulary", "Vocabulary\Vocabulary.csproj", "{C3170B13-A314-46F4-A1D9-78FC526E4C0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numbers", "Numbers\Numbers.csproj", "{0E6B734C-B6C7-40F3-9844-85284BC07E5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{C3170B13-A314-46F4-A1D9-78FC526E4C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3170B13-A314-46F4-A1D9-78FC526E4C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3170B13-A314-46F4-A1D9-78FC526E4C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E6B734C-B6C7-40F3-9844-85284BC07E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E6B734C-B6C7-40F3-9844-85284BC07E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E6B734C-B6C7-40F3-9844-85284BC07E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E6B734C-B6C7-40F3-9844-85284BC07E5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
