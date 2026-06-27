@@ -102,3 +102,14 @@ Console.WriteLine($"{"0.0 / 3.0",-col1} | {0.0 / 3.0,col2}");
 Console.WriteLine($"{"0.0 / -3.0",-col1} | {0.0 / -3.0,col2}");
 Console.WriteLine(line);
 #endregion
+
+Console.WriteLine("----------");
+
+#region New number types and unsafe code
+
+unsafe
+{
+    Console.WriteLine($"Half uses {sizeof(Half)} bytes and can store numbers in the range {Half.MinValue:N0} to {Half.MaxValue:N0}");
+    Console.WriteLine($"Int128 uses {sizeof(Int128)} byutes and can store numbers in the range {Int128.MinValue:N0} to {Int128.MaxValue:N0}");
+}
+#endregion
