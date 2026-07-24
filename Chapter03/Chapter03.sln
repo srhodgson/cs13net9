@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IterationStatements", "Iter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{4E0504D2-05C0-424E-AC51-C8F2AA97C0F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastingConverting", "CastingConverting\CastingConverting.csproj", "{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,18 @@ Global
 		{4E0504D2-05C0-424E-AC51-C8F2AA97C0F7}.Release|x64.Build.0 = Release|Any CPU
 		{4E0504D2-05C0-424E-AC51-C8F2AA97C0F7}.Release|x86.ActiveCfg = Release|Any CPU
 		{4E0504D2-05C0-424E-AC51-C8F2AA97C0F7}.Release|x86.Build.0 = Release|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Debug|x64.Build.0 = Debug|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Debug|x86.Build.0 = Debug|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Release|x64.ActiveCfg = Release|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Release|x64.Build.0 = Release|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Release|x86.ActiveCfg = Release|Any CPU
+		{830F921D-9DE3-462A-AF29-4DB1F0F7AE02}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
