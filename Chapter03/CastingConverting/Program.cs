@@ -130,3 +130,20 @@ WriteLine($"I have {friends} friends to invite to my party.");
 WriteLine($"My birthday is {birthday}.");
 WriteLine($"My birthday is {birthday:D}.");
 #endregion
+
+WriteLine();
+
+#region Avoiding Parse exceptions by using the TryParse method
+
+Write("How many eggs are there? ");
+string? input = ReadLine();
+
+if (int.TryParse(input, out int count))
+{
+    WriteLine($"There are {count} eggs.");
+}
+else
+{
+    WriteLine("I could not parse the input.");
+}
+#endregion
