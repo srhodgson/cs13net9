@@ -1,4 +1,6 @@
-﻿#region Casting numbers implicitly and explicitly
+﻿using static System.Convert; // To use the ToInt32 method.
+
+#region Casting numbers implicitly and explicitly
 int a = 10;
 double b = a; // An int can be safely cast into a double.
 WriteLine($"a is {a}, b is {b}");
@@ -35,3 +37,12 @@ int s = (int)r;
 WriteLine($"{r,38:B38} = {r}");
 WriteLine($"{s,38:B32} = {s}");
 #endregion
+
+WriteLine();
+
+#region Converting with the System.Convert type
+double g = 9.8;
+int h = ToInt32(g); // A method of System.Convert 
+WriteLine($"g is {g}, h is {h}");
+#endregion
+
