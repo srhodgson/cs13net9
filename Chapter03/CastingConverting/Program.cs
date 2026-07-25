@@ -15,3 +15,23 @@ e = 5_000_000_000;
 f = (int)e;
 WriteLine($"e is {e:N0}, f is {f:N0}");
 #endregion
+
+WriteLine();
+
+#region How negative numbers are represented in binary
+
+WriteLine("{0,12}  {1,34}", "Decimal", "Binary");
+WriteLine("{0,12}  {0,34:B32}", int.MaxValue);
+for (int i = 8; i >= -8; i--)
+{
+    WriteLine("{0,12}  {0,34:B32}", i);
+}
+WriteLine("{0,12}  {0,34:B32}", int.MinValue);
+
+WriteLine();
+
+long r = 0b_101000101010001100100111010100101010;
+int s = (int)r;
+WriteLine($"{r,38:B38} = {r}");
+WriteLine($"{s,38:B32} = {s}");
+#endregion
