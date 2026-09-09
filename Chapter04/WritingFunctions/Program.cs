@@ -10,4 +10,5 @@
 // WriteLine($"You must pay {CalculateTax(149, "FR"):C} in tax.");
 
 //RunCardinalToOrdinal();
-RunFactorial();
+//RunFactorial();
+RunFibImperative();
