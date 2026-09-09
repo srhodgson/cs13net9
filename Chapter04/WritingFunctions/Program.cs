@@ -8,3 +8,5 @@ WriteLine($"You must pay {taxToPay:C} in tax.");
 
 // Alternatively, call the function in the interpolated string.
 // WriteLine($"You must pay {CalculateTax(149, "FR"):C} in tax.");
+
+RunCardinalToOrdinal();
