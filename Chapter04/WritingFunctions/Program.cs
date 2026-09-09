@@ -1,12 +1,13 @@
 ﻿// TimesTable(7, 20);
 
-ConfigureConsole("fr-FR");
+//ConfigureConsole("fr-FR");
 
-decimal taxToPay = CalculateTax(149, "FR");
+//decimal taxToPay = CalculateTax(149, "FR");
 
-WriteLine($"You must pay {taxToPay:C} in tax.");
+//WriteLine($"You must pay {taxToPay:C} in tax.");
 
 // Alternatively, call the function in the interpolated string.
 // WriteLine($"You must pay {CalculateTax(149, "FR"):C} in tax.");
 
-RunCardinalToOrdinal();
+//RunCardinalToOrdinal();
+RunFactorial();
