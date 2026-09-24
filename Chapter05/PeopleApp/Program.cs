@@ -57,3 +57,23 @@ for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++)
     WriteLine($"> {bob.Children[childIndex].Name}");
 }
 #endregion    
+
+WriteLine();
+
+#region Making a field static
+
+BankAccount.InterestRate = 0.012M; // Store a shared value in static field.
+BankAccount jonesAccount = new();
+jonesAccount.AccountName = "Mrs. Jones";
+jonesAccount.Balance = 2400;
+WriteLine(format: "{0} earned {1:C} interest.",
+    arg0: jonesAccount.AccountName,
+    arg1: jonesAccount.Balance * BankAccount.InterestRate);
+
+BankAccount gerrierAccount = new();
+gerrierAccount.AccountName = "Mr. Gerrier";
+gerrierAccount.Balance = 98;
+WriteLine(format: "{0} earned {1:C} interest.",
+    arg0: gerrierAccount.AccountName,
+    arg1: gerrierAccount.Balance * BankAccount.InterestRate);
+#endregion
