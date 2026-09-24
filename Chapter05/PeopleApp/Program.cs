@@ -77,3 +77,8 @@ WriteLine(format: "{0} earned {1:C} interest.",
     arg0: gerrierAccount.AccountName,
     arg1: gerrierAccount.Balance * BankAccount.InterestRate);
 #endregion
+
+WriteLine();
+
+// Constant fields are accessible via the type.
+WriteLine($"{bob.Name} is a {Person.Species}");
