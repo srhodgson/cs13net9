@@ -82,3 +82,8 @@ WriteLine();
 
 // Constant fields are accessible via the type.
 WriteLine($"{bob.Name} is a {Person.Species}");
+
+WriteLine();
+
+// Read-only fields are accesible via the variable.
+WriteLine($"{bob.Name} was born on {bob.HomePlanet}.");
