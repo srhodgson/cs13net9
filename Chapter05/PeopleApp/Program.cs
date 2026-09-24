@@ -39,3 +39,21 @@ Person alice = new()
 
 WriteLine(format: "{0} was born on {1:d}.",
     arg0: alice.Name, arg1: alice.Born);
+    
+#region Understanding generic collections
+// Works with all version of C#.
+Person alfred = new Person();
+alfred.Name = "Alfred";
+bob.Children.Add(alfred);
+
+// Works with C# 3 and later.
+bob.Children.Add(new Person { Name = "Bella" });
+
+// Works with C# 9 and later.
+bob.Children.Add(new() { Name = "Zoe" });
+WriteLine($"{bob.Name} has {bob.Children.Count} children:");
+for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++)
+{
+    WriteLine($"> {bob.Children[childIndex].Name}");
+}
+#endregion    
