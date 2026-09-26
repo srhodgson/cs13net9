@@ -25,12 +25,24 @@ public class Person : object
         Name = "Unknown";
         Instantiated = DateTime.Now;
     }
-    
+
     public Person(string initialName, string homePlanet)
     {
         Name = initialName;
         HomePlanet = homePlanet;
         Instantiated = DateTime.Now;
+    }
+    #endregion
+
+    #region Methods: Actions the type can perform.
+    public void WriteToConsole()
+    {
+        WriteLine($"{Name} was born on a {Born:dddd}.");
+    }
+    
+    public string GetOrigin()
+    {
+        return $"{Name} was born on {HomePlanet}.";
     }
     #endregion
 }
