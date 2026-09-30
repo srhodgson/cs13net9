@@ -131,4 +131,4 @@ WriteLine(bob.GetOrigin());
 WriteLine();
 
 WriteLine(bob.SayHello());
-WriteLine(bob.SayHelloTo("Emily"));
+WriteLine(bob.SayHello("Emily"));
