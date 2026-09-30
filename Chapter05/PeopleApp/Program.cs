@@ -132,3 +132,4 @@ WriteLine();
 
 WriteLine(bob.SayHello());
 WriteLine(bob.SayHello("Emily"));
+WriteLine(bob.OptionalParameters());
