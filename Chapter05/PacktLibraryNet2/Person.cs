@@ -61,7 +61,7 @@ public class Person : object
     
     #region Passing optional parameters
 
-    public string OptionalParameters(string command = "Run!", double number = 0.0, bool active = true)
+    public string OptionalParameters(int count, string command = "Run!", double number = 0.0, bool active = true)
     {
         return string.Format(
             format: "command is {0}, number is {1}, active is {2}",
