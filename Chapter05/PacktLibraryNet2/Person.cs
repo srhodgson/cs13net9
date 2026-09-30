@@ -70,4 +70,20 @@ public class Person : object
             arg2: active);
     }
     #endregion
+    
+    #region Controlling how parameters are passed
+
+    public void PassingParameters(int w, in int x, ref int y, out int z)
+    {
+        // out parameters cannot have a default and they must be initialised inside the method.
+        z = 100;
+        
+        // Incrememnt each parameter except the read-only x.
+        w++;
+        y++;
+        z++;
+        
+        WriteLine($"In the method: w={w}, x={x}, y={y}, z={z}");
+    }
+    #endregion
 }
