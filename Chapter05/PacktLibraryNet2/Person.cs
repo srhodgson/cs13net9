@@ -45,4 +45,17 @@ public class Person : object
         return $"{Name} was born on {HomePlanet}.";
     }
     #endregion
+    
+    #region Defining and passing parameters to methods
+
+    public string SayHello()
+    {
+        return $"{Name} says 'Hello!'";
+    }
+
+    public string SayHelloTo(string name)
+    {
+        return $"{Name} says 'Hello, {name}!'";
+    }
+    #endregion
 }
