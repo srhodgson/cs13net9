@@ -72,7 +72,6 @@ public class Person : object
     #endregion
     
     #region Controlling how parameters are passed
-
     public void PassingParameters(int w, in int x, ref int y, out int z)
     {
         // out parameters cannot have a default and they must be initialised inside the method.
@@ -84,6 +83,20 @@ public class Person : object
         z++;
         
         WriteLine($"In the method: w={w}, x={x}, y={y}, z={z}");
+    }
+    #endregion
+    
+    #region Passing a variable number of parameters
+
+    public void ParamsParameters(string text, params int[] numbers)
+    {
+        int total = 0;
+
+        foreach (int number in numbers)
+        {
+            total += number;
+        }
+        WriteLine($"{text}: {total}");
     }
     #endregion
 }
