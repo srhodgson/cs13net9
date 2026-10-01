@@ -99,4 +99,12 @@ public class Person : object
         WriteLine($"{text}: {total}");
     }
     #endregion
+    
+    #region Combining mul;tiple returned values using tuples
+    // Method that returns a tuple: (string, int)
+    public (string, int) GetFruit()
+    {
+        return ("Apples", 5);
+    }
+    #endregion
 }

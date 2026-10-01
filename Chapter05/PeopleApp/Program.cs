@@ -159,3 +159,8 @@ bob.ParamsParameters("Sum using commas", 3, 6, 1, 2);
 bob.ParamsParameters("Sum using collection expression", [3,6,1,2]);
 bob.ParamsParameters("Sum using explicit array", new int[] { 3, 6, 1, 2 });
 bob.ParamsParameters("Sum(empty)");
+
+WriteLine();
+
+(string, int) fruit = bob.GetFruit();
+WriteLine($"{fruit.Item1}, {fruit.Item2} there are.");
