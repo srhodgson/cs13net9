@@ -107,4 +107,12 @@ public class Person : object
         return ("Apples", 5);
     }
     #endregion
+    
+    #region Naming the fields of a tuple
+    // Method that returns a tuple with names fields.
+    public (string Name, int Number) GetNamedFruit()
+    {
+        return (Name: "Apples", Number: 5);
+    }
+    #endregion
 }
