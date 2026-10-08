@@ -1,8 +1,12 @@
 ﻿using Packt.Shared; // To use Person.
+using Fruit = (string Name, int Number); // Aliasing a tuple type.
+
 ConfigureConsole(); // Sets current culture to US English.
 // Alternatives:
 // ConfigureConsole(useComputerCulture: true); // Use your culture 
 // ConfigureConsole(culture: "fr-FR"); // Use French culture.
+
+
 
 // Person  bob = new Person(); // C# 1 or later.
 // var bob = new Person(); // C# 3 or later.
@@ -167,8 +171,14 @@ WriteLine($"{fruit.Item1}, {fruit.Item2} there are.");
 
 WriteLine();
 
-var fruitNamed = bob.GetNamedFruit();
+// Without an aliased type.
+// var fruitNamed = bob.GetNamedFruit();
+// With an aliased tuple type.
+Fruit fruitNamed = bob.GetNamedFruit();
 WriteLine($"There are {fruitNamed.Number} {fruitNamed.Name}");
+
+(string fruitName, int fruitNumber) = bob.GetFruit();
+WriteLine($"Deconstructed tuple: {fruitName}, {fruitNumber}");
 
 WriteLine();
 
@@ -176,3 +186,10 @@ var thing1 = ("Neville", 4);
 WriteLine($"{thing1.Item1} has {thing1.Item2} children.");
 var thing2 = (bob.Name, bob.Children.Count);
 WriteLine($"{thing2.Name} has {thing2.Count} children.");
+
+WriteLine();
+
+var (name1, dob1) = bob; // Implicitly calls the Deconstruct method.
+WriteLine($"Deconstructed person: {name1}, {dob1}");
+var (name2, dob2, fav2) = bob;
+WriteLine($"Deconstructed person: {name2}, {dob2}, {fav2}");

@@ -1,4 +1,6 @@
 // All types in this file will be defined in this file-scoped namespace.
+using System.Reflection;
+
 namespace Packt.Shared;
 
 public class Person : object
@@ -107,12 +109,28 @@ public class Person : object
         return ("Apples", 5);
     }
     #endregion
-    
+
     #region Naming the fields of a tuple
     // Method that returns a tuple with names fields.
     public (string Name, int Number) GetNamedFruit()
     {
         return (Name: "Apples", Number: 5);
+    }
+    #endregion
+
+    #region Deconstructing other types using tuples 
+    // Deconstructors: Break down this object into parts.
+    public void Deconstruct(out string? name, out DateTimeOffset dob)
+    {
+        name = Name;
+        dob = Born;
+    }
+    
+    public void Deconstruct(out string? name, out DateTimeOffset dob, out WondersOfTheAncientWorld fav)
+    {
+        name = Name;
+        dob = Born;
+        fav = FavouriteAncientWonder;
     }
     #endregion
 }
