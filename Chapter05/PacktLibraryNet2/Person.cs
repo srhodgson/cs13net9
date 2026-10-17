@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace Packt.Shared;
 
-public class Person : object
+public partial class Person : object
 {
     #region Fields: Data or state for this person.
     public string? Name; // ? means it can be null.
@@ -133,4 +133,23 @@ public class Person : object
         fav = FavouriteAncientWonder;
     }
     #endregion
+    
+    // Method with a local function.
+    public static int Factorial(int number)
+    {
+        if (number < 0)
+        {
+            throw new ArgumentException($"{nameof(number)} cannot be less than zero.");
+        }
+
+        return LocalFactorial(number);
+
+        int LocalFactorial(int localNumber)
+        {
+            if (localNumber == 0)
+                return 1;
+
+            return localNumber * LocalFactorial(localNumber - 1);
+        }
+    }
 }

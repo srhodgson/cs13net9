@@ -193,3 +193,27 @@ var (name1, dob1) = bob; // Implicitly calls the Deconstruct method.
 WriteLine($"Deconstructed person: {name1}, {dob1}");
 var (name2, dob2, fav2) = bob;
 WriteLine($"Deconstructed person: {name2}, {dob2}, {fav2}");
+
+WriteLine();
+
+// Change to -1 to make the exception handling code execute 
+int number = 5;
+try
+{
+    WriteLine($"{number}! is {Person.Factorial(number)}");
+}
+catch (Exception ex)
+{
+    WriteLine($"{ex.GetType()} says: {ex.Message} number was {number}.");
+}
+
+WriteLine();
+
+Person sam = new()
+{
+    Name = "Sam",
+    Born = new(1969, 6, 25, 0, 0, 0, TimeSpan.Zero)
+};
+WriteLine(sam.Origin);
+WriteLine(sam.Greeting);
+WriteLine(sam.Age);
