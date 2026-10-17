@@ -17,5 +17,34 @@ public partial class Person
     // lambda expression body syntax.
     public string Greeting => $"{Name} says 'Hello!'";
     public int Age => DateTime.Today.Year - Born.Year;
+    
+    // A read-write property defined using C# 3 auto-syntax 
+    public string? FavoriteIceCream { get; set; }
+    
+    // A private backing field to store the property value.
+    private string? _favoritePrimaryColor;
+    
+    // A public property to read and write to the field.
+    public string? FavoritePrimaryColor
+    {
+        get
+        {
+            return _favoritePrimaryColor;
+        }
+        set
+        {
+            switch (value?.ToLower())
+            {
+                case "red":
+                case "green":
+                case "blue":
+                    _favoritePrimaryColor = value;
+                    break;
+                default:
+                    throw new ArgumentException($"{value} is not a primary colour. " +
+                                                "Choose from: red, green, blue.");
+            }
+        }
+    }
     #endregion
 }
