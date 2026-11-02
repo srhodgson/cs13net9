@@ -19,7 +19,7 @@ bob.Born = new DateTimeOffset(
     year: 1965, month: 12, day: 22,
     hour: 16, minute: 28, second: 0,
     offset: TimeSpan.FromHours(-5)); // US Eastern Standard Time
-bob.FavouriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
+bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
 bob.BucketList = WondersOfTheAncientWorld.HangingGardensOfBabylon | WondersOfTheAncientWorld.MausoleumAtHalicarnassus;
 // bob.BucketList = (WondersOfTheAncientWorld)18;
 
@@ -27,8 +27,8 @@ WriteLine(format: "{0} was born on {1:D}.", // Long date.
     arg0: bob.Name, arg1: bob.Born);
 WriteLine(format: "{0}'s favourite wonder is {1}. Its integer is {2}.",
     arg0: bob.Name,
-    arg1: bob.FavouriteAncientWonder,
-    arg2: (int)bob.FavouriteAncientWonder);
+    arg1: bob.FavoriteAncientWonder,
+    arg2: (int)bob.FavoriteAncientWonder);
 WriteLine($"{bob.Name}'s bucket list is {bob.BucketList}.");
 
 WriteLine();
@@ -161,10 +161,10 @@ WriteLine($"After: e={e}, f={f}, g={g}, h={h}");
 WriteLine();
 bob.ParamsParameters("Sum using commas", 3, 6, 1, 2);
 bob.ParamsParameters("Sum using collection expression", [3,6,1,2]);
-bob.ParamsParameters("Sum using explicit array", new int[] { 3, 6, 1, 2 });
-bob.ParamsParameters("Sum(empty)");
-
-WriteLine();
+            bob.ParamsParameters("Sum using explicit array", new int[] { 3, 6, 1, 2 });
+            bob.ParamsParameters("Sum(empty)");
+            
+            WriteLine();
 
 (string, int) fruit = bob.GetFruit();
 WriteLine($"{fruit.Item1}, {fruit.Item2} there are.");
