@@ -291,4 +291,15 @@ foreach (Passenger passenger in passengers)
         _ => 800M
     };
     WriteLine($"Flight costs {flightCost:C} for {passenger}");
+    
+    #region Init-only properties
+
+    ImmutablePerson jeff = new()
+    {
+        FirstName = "Jeff",
+        LastName = "Winger"
+    };
+    //jeff.FirstName = "Geoff";
+
+    #endregion
 }
