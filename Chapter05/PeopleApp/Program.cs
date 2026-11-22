@@ -255,7 +255,7 @@ WriteLine($"Sam's second child is {sam.Children[1].Name}");
 WriteLine($"Sam's first child is {sam[0].Name}");
 WriteLine($"Sam's second child is {sam[1].Name}");
 // Get using the string indexer
-WriteLine($"Sam's child named Ella is {sam["Ella"].Age} years old.");
+WriteLine($"Sam's child named Ella is {sam["Ella"]?.Age} years old.");
 
 WriteLine();
 

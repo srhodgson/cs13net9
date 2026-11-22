@@ -103,7 +103,7 @@ public partial class Person : object
     }
     #endregion
     
-    #region Combining mul;tiple returned values using tuples
+    #region Combining multiple returned values using tuples
     // Method that returns a tuple: (string, int)
     public (string, int) GetFruit()
     {

@@ -57,7 +57,7 @@ public partial class Person
             string wonderName = value.ToString();
             if (wonderName.Contains(','))
             {
-                throw new ArgumentException(message: "Favorite anciet wonder can only have a single enum value.",
+                throw new ArgumentException(message: "Favorite ancient wonder can only have a single enum value.",
                     paramName: nameof(FavoriteAncientWonder));
             }
 
@@ -87,7 +87,7 @@ public partial class Person
     }
     
     // A read-only string indexer.
-    public Person this[string name]
+    public Person? this[string name]
     {
         get
         {
